@@ -21,4 +21,12 @@ button {
     box-shadow: 0px 10px 15px 0px #00000010, 0px 4px 6px 0px #00000010;
     text-align: center;
     @include font-inter;
+
+    &.success {
+        background-color: $success;
+    }
+
+    &.warning {
+        background-color: $warning;
+    }
 }
