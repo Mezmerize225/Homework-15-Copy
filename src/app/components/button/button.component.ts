@@ -10,6 +10,7 @@ import { NgClass } from '@angular/common';
 })
 export class ButtonComponent {
   public buttonColorType = input<buttonColor>('primary');
+  public isLoading = input<boolean>();
 }
 
 
