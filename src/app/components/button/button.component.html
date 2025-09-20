@@ -1,8 +1,18 @@
-<button class=" {{ buttonColorType() }}">
+<button [class]=" {{ buttonColorType() }}" [ngClass]="{ loading: isLoading() }">
     @if( isLoading() ) {
-        Loading
-    } else {
+        @if( buttonColorType() === 'primary' ){
+            Loading...
+        } @else if( buttonColorType() === 'success' ){
+            Processing...
+        } @else {
+            Sending...
+        }
+    } @else {
         <ng-content></ng-content>
     }
     
+
+
+
+
 </button>

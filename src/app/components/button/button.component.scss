@@ -28,26 +28,54 @@ button {
     transition: 0.3s ease;
     @include box-shadow(#0EA5E94D);
 
+    &:not(.loading) {
+
+        &.success {
+            background-color: $success;
+
+            &:hover {
+                background-color: $success-hover;
+                @include box-shadow(#22C55E4D);
+            }
+        }
+
+        &.warning {
+            background-color: $warning;
+
+            &:hover {
+                background-color: $warning-hover;
+                @include box-shadow(#F59E0B4D);
+            }
+        }
+
+        &:hover {
+            transform: scale(105%);
+            background-color: $primary-hover;
+        }
+        
+
+    }
+
     &.success {
         background-color: $success;
 
-        &:hover {
-            background-color: $success-hover;
-            @include box-shadow(#22C55E4D);
-        }
+        // &:hover {
+        //     background-color: $success-hover;
+        //     @include box-shadow(#22C55E4D);
+        // }
     }
 
     &.warning {
         background-color: $warning;
 
-        &:hover {
-            background-color: $warning-hover;
-            @include box-shadow(#F59E0B4D);
-        }
+        // &:hover {
+        //     background-color: $warning-hover;
+        //     @include box-shadow(#F59E0B4D);
+        // }
     }
 
-    &:hover {
-        transform: scale(105%);
-        background-color: $primary-hover;
-    }
+    // &:hover {
+    //     transform: scale(105%);
+    //     background-color: $primary-hover;
+    // }
 }
